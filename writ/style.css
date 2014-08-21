@@ -1161,15 +1161,11 @@ object {
 }
 .footer-widgets {
 	float: left;
-	width: 30%;
 }
 .first,
 .second {
 	margin-right: 1.1875rem;
 }
-.third {
-	float:right;
-	}
 .widget {
 	margin-bottom: 1.875rem;
 	-webkit-hyphens: auto;
