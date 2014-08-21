@@ -573,14 +573,20 @@ a:active {
 
 .site {
 	background-color: #fff;
-	border-bottom: 5px solid #cc0000;
-	border-top: 5px solid #cc0000;
+	border-bottom: 5px solid #000;
+	border-top: 5px solid #000;
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 1280px;
 }
 .site-main {
 	margin: 0 auto;
-	max-width: 870px;
+	max-width: 1170px;
+}
+
+.site-content {
+	margin-left: 20px;
+	margin-right: 10px;
+	max-width: 1100px;
 }
 
 /*--------------------------------------------------------------
@@ -766,7 +772,7 @@ article .format-aside .hentry {
 }
 .format-image .entry-content,
 .format-image .entry-meta {
-	max-width: 750px;
+	max-width: 840px;
 }
 .format-image .wp-caption.alignleft,
 .format-image .wp-caption.width-750,
@@ -786,7 +792,7 @@ article .format-aside .hentry {
 /* Video */
 .format-video .entry-content,
 .format-video .entry-meta {
-	max-width: 750px;
+	max-width: 840px;
 }
 /*Audio */
 article .format-audio {
@@ -824,21 +830,21 @@ article .format-audio {
 .wp-caption.alignleft,
 img.alignleft {
 	margin-left: -115px;
-	max-width: 750px;
+	max-width: 840px;
 }
 .wp-caption.alignright,
 img.alignright {
 	margin-right: -115px;
-	max-width: 750px;
+	max-width: 840px;
 }
 
 /* Stand alone full size and large images in the standard format */
 .size-full,
 .size-large {
-	max-width: 750px;
+	max-width: 840px;
 }
 
-/* If the image is smaller than 750px and inside a caption keep it at 520px */
+/* If the image is smaller than 840px and inside a caption keep it at 520px */
 .wp-caption.smaller-than-750 {
 	margin-left: auto;
 }
@@ -856,7 +862,7 @@ img.alignright {
 /* Full size and large images with a caption */
 .wp-caption.width-750 {
 	margin-left: -115px;
-	max-width: 750px;
+	max-width: 840px;
 }
 .wp-caption.width-750 img {
 	margin-left: auto;
@@ -1017,7 +1023,7 @@ object {
 .comments-area {
 	border-top: 4px double #ccc;
 	margin: 1.875em auto 0 auto;
-	max-width: 750px;
+	max-width: 840px;
 	padding-top: 1.875em;
 }
 .comment-navigation {
@@ -1130,7 +1136,7 @@ object {
 
 .search-results .content-area {
 	margin: 0 auto 4.1875rem auto;
-	max-width: 750px;
+	max-width: 840px;
 }
 
 /*--------------------------------------------------------------
@@ -1153,7 +1159,7 @@ object {
 .footer-widget-area {
 	border-top: 4px double #ccc;
 	margin: 3.75rem auto 0 auto;
-	max-width: 750px;
+	max-width: 840px;
 	padding-top: 1.875rem;
 }
 .footer-widgets {
@@ -1420,6 +1426,7 @@ object {
 }
 .content-area {
 	float:left;
+	max-width:840px;
 	}
 /* Contact form */
 .wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
