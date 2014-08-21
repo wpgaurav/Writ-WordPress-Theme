@@ -1,0 +1,262 @@
+# Copyright (C) 2014 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Bosco 1.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/bosco\n"
+"POT-Creation-Date: 2014-06-25 09:23:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:44
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:23
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:26
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:29
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:32
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:35
+msgid "Asides"
+msgstr ""
+
+#: archive.php:38
+msgid "Images"
+msgstr ""
+
+#: archive.php:41
+msgid "Videos"
+msgstr ""
+
+#: archive.php:44
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:47
+msgid "Links"
+msgstr ""
+
+#: archive.php:50
+msgid "Archives"
+msgstr ""
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35 comments.php:50
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36 comments.php:51
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:52
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:62
+msgid "Comments are closed."
+msgstr ""
+
+#: content-aside.php:22 content-link.php:15 content-quote.php:22
+#: content-video.php:17 content.php:28
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:25 content-link.php:18 content-quote.php:25
+#: content-video.php:20 content.php:31 page.php:22
+msgid "Pages:"
+msgstr ""
+
+#: content-aside.php:33 content-link.php:26 content-quote.php:33
+#: content-video.php:28 content.php:41 page.php:27
+msgid "Edit"
+msgstr ""
+
+#: content-aside.php:36 content-link.php:29 content-quote.php:36
+#: content-video.php:31 content.php:45
+msgid "Leave a comment"
+msgstr ""
+
+#: content-aside.php:36 content-link.php:29 content-quote.php:36
+#: content-video.php:31 content.php:45
+msgid "1 Comment"
+msgstr ""
+
+#: content-aside.php:36 content-link.php:29 content-quote.php:36
+#: content-video.php:31 content.php:45
+msgid "% Comments"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: content-video.php:38 content-video.php:48 inc/template-tags.php:158
+#: inc/template-tags.php:161
+msgid ", "
+msgstr ""
+
+#: content-video.php:42 inc/template-tags.php:169
+msgid "Posted in %1$s"
+msgstr ""
+
+#: content-video.php:52 inc/template-tags.php:175
+msgid "Tagged %1$s"
+msgstr ""
+
+#: footer.php:12
+msgid "A Semantic Personal Publishing Platform"
+msgstr ""
+
+#: footer.php:12
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:14
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:56
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:72
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: functions.php:80
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: functions.php:88
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: functions.php:112
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:165
+msgid "Page %s"
+msgstr ""
+
+#: header.php:31
+msgid "Menu"
+msgstr ""
+
+#: header.php:32
+msgid "Skip to content"
+msgstr ""
+
+#: inc/template-tags.php:21
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:25
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:29
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:54
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:57
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: inc/template-tags.php:58
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: inc/template-tags.php:137
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+
+#: no-results.php:9
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:15
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:19
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: no-results.php:24
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: search.php:14
+msgid "Search Results for: %s"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Bosco"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://wordpress.com/themes/bosco/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A personal blog theme with a responsive layout and beautiful typography."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wordpress.com/themes/"
+msgstr ""
