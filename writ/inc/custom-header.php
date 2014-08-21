@@ -12,8 +12,8 @@ function writ_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'writ_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 840,
-		'height'                 => 154,
+		'width'                  => 1200,
+		'height'                 => 150,
 		'flex-height'            => false,
 		'wp-head-callback'       => 'writ_header_style',
 		'admin-head-callback'    => 'writ_admin_header_style',
@@ -87,7 +87,7 @@ function writ_admin_header_style() {
 			text-align: center;
 		}
 		#headimg h1 a {
-			color: #c00;
+			color: #000;
 			text-decoration: none;
 		}
 		#headimg h2 {

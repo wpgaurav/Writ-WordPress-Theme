@@ -580,13 +580,7 @@ a:active {
 }
 .site-main {
 	margin: 0 auto;
-	max-width: 1170px;
-}
-
-.site-content {
-	margin-left: 20px;
-	margin-right: 10px;
-	max-width: 1100px;
+	max-width: 1040px;
 }
 
 /*--------------------------------------------------------------
@@ -622,8 +616,11 @@ a:active {
 .entry-meta {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 600px;
+	max-width: 700px;
 }
+#full-width entry-content {
+		max-width:1000px;
+		}
 .entry-meta {
 	color: #333333;
 }
@@ -772,7 +769,7 @@ article .format-aside .hentry {
 }
 .format-image .entry-content,
 .format-image .entry-meta {
-	max-width: 840px;
+	max-width: 760px;
 }
 .format-image .wp-caption.alignleft,
 .format-image .wp-caption.width-750,
@@ -792,7 +789,7 @@ article .format-aside .hentry {
 /* Video */
 .format-video .entry-content,
 .format-video .entry-meta {
-	max-width: 840px;
+	max-width: 760px;
 }
 /*Audio */
 article .format-audio {
@@ -830,21 +827,21 @@ article .format-audio {
 .wp-caption.alignleft,
 img.alignleft {
 	margin-left: -115px;
-	max-width: 840px;
+	max-width: 760px;
 }
 .wp-caption.alignright,
 img.alignright {
 	margin-right: -115px;
-	max-width: 840px;
+	max-width: 760px;
 }
 
 /* Stand alone full size and large images in the standard format */
 .size-full,
 .size-large {
-	max-width: 840px;
+	max-width: 760px;
 }
 
-/* If the image is smaller than 840px and inside a caption keep it at 520px */
+/* If the image is smaller than 760px and inside a caption keep it at 520px */
 .wp-caption.smaller-than-750 {
 	margin-left: auto;
 }
@@ -862,7 +859,7 @@ img.alignright {
 /* Full size and large images with a caption */
 .wp-caption.width-750 {
 	margin-left: -115px;
-	max-width: 840px;
+	max-width: 760px;
 }
 .wp-caption.width-750 img {
 	margin-left: auto;
@@ -975,7 +972,7 @@ img.alignright {
 .attachment img {
 	display: block;
 	margin: 0 auto;
-	max-width: 840px;
+	max-width: 760px;
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -1023,7 +1020,7 @@ object {
 .comments-area {
 	border-top: 4px double #ccc;
 	margin: 1.875em auto 0 auto;
-	max-width: 840px;
+	max-width: 760px;
 	padding-top: 1.875em;
 }
 .comment-navigation {
@@ -1136,7 +1133,7 @@ object {
 
 .search-results .content-area {
 	margin: 0 auto 4.1875rem auto;
-	max-width: 840px;
+	max-width: 760px;
 }
 
 /*--------------------------------------------------------------
@@ -1159,17 +1156,20 @@ object {
 .footer-widget-area {
 	border-top: 4px double #ccc;
 	margin: 3.75rem auto 0 auto;
-	max-width: 840px;
+	max-width: 95%;
 	padding-top: 1.875rem;
 }
 .footer-widgets {
 	float: left;
-	width: 205px;
+	width: 30%;
 }
 .first,
 .second {
-	margin-right: 4.1875rem;
+	margin-right: 1.1875rem;
 }
+.third {
+	float:right;
+	}
 .widget {
 	margin-bottom: 1.875rem;
 	-webkit-hyphens: auto;
@@ -1255,9 +1255,6 @@ object {
 		margin-left: 2rem;
 		margin-right: 2rem;
 	}
-	#tertiary {
-			display:none;
-			}
 	.main-navigation ul {
 		display: none;
 	}
@@ -1359,9 +1356,7 @@ object {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
-	#tertiary {
-		display:none;
-	}
+
 	.hentry {
 		margin-top: 4.1875rem;
 	}
@@ -1388,10 +1383,6 @@ object {
 	html {
 		font-size: 87.5%;
 	}
-	#tertiary {
-		display:none;
-	}
-
 	.site-content {
 		width: 90%;
 	}
@@ -1417,16 +1408,19 @@ object {
 	}
 }
 #tertiary {
-	float: right;
-	width: 230px;
-	margin-left:10px;
+	max-width: 360px;
+	margin-left:15px
+	margin-right: 10px;
+	padding-top: 30px;
 }
 #tertiary a {
 		color:#22313f;
 }
+#secondary {
+		max-width:95%
+}
 .content-area {
 	float:left;
-	max-width:840px;
 	}
 /* Contact form */
 .wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
