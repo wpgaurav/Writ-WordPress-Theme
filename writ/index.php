@@ -13,6 +13,7 @@
 
 get_header(); ?>
 
+	<div id="writ-content" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -40,7 +41,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div><!--#primary -->
+		<?php get_sidebar(); ?>
+	</div><!-- #writ-content -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

@@ -7,6 +7,10 @@
 
 get_header(); ?>
 
+	<div id="writ-content" class="site-content">
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+} ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -27,6 +31,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<?php get_sidebar(); ?>
+	</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-	<div id="full-site">
+	<div id="writ-archive" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -87,5 +87,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar();?>
-</div><!--#full-site-->
+</div><!--#writ-archive-->
 <?php get_footer(); ?>

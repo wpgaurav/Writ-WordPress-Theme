@@ -3,11 +3,11 @@ Theme Name: Writ
 Theme URI: https://gauravtiwari.org/themes/writ/
 Author: Gaurav Tiwari
 Author URI: https://gauravtiwari.org/themes/
-Description: A personal blog theme with a responsive layout and beautiful typography.
-Version: 1.0.1
+Description: Responsive WordPress theme.
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: responsive-layout, one-column, two-column, custom-background, custom-header, custom-menu, featured-images, rtl-language-support, editor-style, post-formats, translation-ready, photoblogging, white, light, writing
+Tags: responsive-layout, full-width, two-column, custom-background, custom-header, custom-menu, featured-images, rtl-language-support, editor-style, post-formats, translation-ready, photoblogging, white, light, writing
 
 Writ is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
@@ -65,6 +65,7 @@ GNU General Public License for more details.
 	17.2 - 780px
 	17.3 - 600px
 	17.4 - 500px
+18.0 - WP Contact Form
 --------------------------------------------------------------*/
 
 
@@ -1411,10 +1412,8 @@ object {
 }
 #tertiary {
 	float: right;
-	width: 260px;
+	width: 230px;
 	margin-left:10px;
-	margin-right:40px;
-	padding-top:80px;
 }
 #tertiary a {
 		color:#22313f;
@@ -1422,3 +1421,44 @@ object {
 .content-area {
 	float:left;
 	}
+/* Contact form */
+.wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
+    height:38px;
+    line-height:38px;
+    width:380px;
+    background:#fff;
+    border:1px solid #d9e4eb;
+    padding:0 5px;
+    outline: none;
+    margin:0 0 12px 0;
+}
+.wpcf7-form .wpcf7-textarea {
+    height:200px;
+}
+.wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
+	margin:5px 0 0 0;
+}
+.wpcf7-form .wpcf7-submit {
+    width:170px;
+    height:46px;
+    border-radius:5px;
+    background: #33abff;
+    margin:0 auto;
+    font-size:14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    box-shadow:0 -3px rgba(0,0,0,0.1) inset;
+    text-align: center;
+    border:none;
+    transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+.wpcf7-form .wpcf7-submit .button:hover {
+    background:#82bac6;
+}
