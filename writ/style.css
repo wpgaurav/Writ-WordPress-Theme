@@ -490,12 +490,12 @@ a:active {
 	text-align: left;
 }
 .main-navigation a {
+	font-family:'Open Sans', "Segoe UI", sans-serif;
 	color: #222;
 	display: block;
-	font-weight: bold;
 	padding: 1.159rem 1.618rem;
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	-ms-word-wrap: break-word;
 		word-wrap: break-word;
 }
