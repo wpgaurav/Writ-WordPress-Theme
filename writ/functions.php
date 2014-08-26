@@ -53,7 +53,9 @@ function writ_setup() {
 	) ) );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array( 'primary' => __( 'Primary Menu', 'writ' ) ) );
+	register_nav_menus( array( 'primary' => __( 'Primary Menu', 'writ' ),
+					'secondary' => __( 'Secondary Menu', 'moka' ),
+ ) );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style( array( 'editor-style.css', writ_font_url() ) );

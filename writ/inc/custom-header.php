@@ -11,7 +11,7 @@
 function writ_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'writ_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => 'f3f3f3',
 		'width'                  => 1200,
 		'height'                 => 150,
 		'flex-height'            => false,
@@ -42,7 +42,7 @@ function writ_header_style() {
 	?>
 		.site-branding {
 			background: url(<?php header_image(); ?>) no-repeat scroll top;
-			background-size: 840px 154px;
+			background-size: 1200px 154px;
 		}
 	<?php
 		endif;
@@ -87,7 +87,7 @@ function writ_admin_header_style() {
 			text-align: center;
 		}
 		#headimg h1 a {
-			color: #000;
+			color: #f3f3f3;
 			text-decoration: none;
 		}
 		#headimg h2 {
@@ -100,7 +100,7 @@ function writ_admin_header_style() {
 			text-align: center;
 		}
 		.appearance_page_custom-header #headimg {
-			background-color: #fff;
+			background-color: #333;
 			border: none;
 			padding: 42px 0;
 		}

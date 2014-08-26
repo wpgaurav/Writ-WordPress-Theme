@@ -35,7 +35,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar( 'sidebar-2' ) &&
 			<?php do_action( 'writ_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'writ' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'writ' ), 'WordPress' ); ?></a>
 			<span class="sep">  &#8226; </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'writ' ), 'Writ', '<a href="https://gauravtiwari.org/" rel="designer">Gaurav Tiwari</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'writ' ), 'Writ', '<a href="http://gauravtiwari.org/" rel="designer">Gaurav Tiwari</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
