@@ -1,16 +1,14 @@
 <?php
 /**
+* Template Name: Full Width Page
+ 
  * @package Writ
+
  */
 
 get_header(); ?>
 
-	<div id="writ-content" class="main-content">
-	<?php if ( function_exists('yoast_breadcrumb') ) {
-yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-} ?>
-
-		<div id="content" class="content-area" role="main">
+	<div id="full-width" class="site-content">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -39,8 +37,5 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 
 			<?php endwhile; // end of the loop. ?>
 
-		</div><!-- #content -->
-	<?php get_sidebar(); ?>
-	</div><!-- #writ-content -->
-
+	</div><!-- #primary -->
 <?php get_footer(); ?>

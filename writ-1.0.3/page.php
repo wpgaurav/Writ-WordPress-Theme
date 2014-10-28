@@ -5,11 +5,7 @@
 
 get_header(); ?>
 
-	<div id="writ-content" class="main-content">
-	<?php if ( function_exists('yoast_breadcrumb') ) {
-yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-} ?>
-
+	<div id="writ-content" class="site-content">
 		<div id="content" class="content-area" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

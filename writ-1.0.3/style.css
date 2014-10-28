@@ -1,16 +1,72 @@
-﻿/*
+/*
 Theme Name: Writ
 Theme URI: http://gauravtiwari.org/2014/08/23/writ-free-responsive-wordpress-theme-for-writers/
 Author: Gaurav Tiwari
 Author URI: http://gauravtiwari.org/
-Description: Writ is a WordPress theme specially made for story writers, poets and  content based bloggers. Writ is aimed to be completely content focused with four optional sidebars, three in footer and one on right of the content area. It features WordPress post formats, featured images and custom header.
-Version: 1.1.0
+Description: Writ is a WordPress theme specially made for story writers, legal blogs and  text based bloggers. Writ is aimed to be completely content focused with four optional sidebars, three in footer and one on right of the content area. It features WordPress post formats, featured images and custom header.
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: responsive-layout, custom-background, custom-header, custom-menu, featured-images, rtl-language-support, editor-style, post-formats, photoblogging, white, light
+Tags: responsive-layout, custom-background, custom-header, custom-menu, featured-images, rtl-language-support, editor-style, post-formats, translation-ready, photoblogging, white, light
 
 Writ is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Global
+	2.1 - Headings
+	2.2 - Text elements
+	2.3 - Links
+	2.4 - Alignment
+	2.5 - Text meant only for screen readers
+	2.6 - Clearing
+3.0 - Menu
+	3.1 - Small menu
+4.0 - Layout
+5.0 - Masthead
+6.0 - Content
+	6.1 - Pages
+	6.2 - Not found
+7.0 - Post formats
+	7.1 - Aside
+	7.2 - Link
+	7.3 - Quote
+	7.4 - Image
+	7.5 - Video
+8.0 - Media
+	8.1 - Smilies
+	8.2 - Images
+	8.3 - Captions
+	8.4 - Galleries
+9.0 - Attachments
+10.0 - Navigation
+11.0 - Comments
+	11.1 Comment form
+12.0 - Footer
+13.0 - Search
+14.0 - 404
+15.0 - Widgets
+16.0 - Infinite Scroll
+17.0 - Media queries
+	17.1 - 870px
+	17.2 - 780px
+	17.3 - 600px
+	17.4 - 500px
+18.0 - WP Contact Form
+--------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -245,8 +301,6 @@ th {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
-	margin:5px 0 25px 0;
-    height:auto;
 }
 button,
 input,
@@ -257,7 +311,10 @@ textarea {
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
-button, input[type=button], input[type=reset], input[type=submit] {
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	background-color: #333;
 	border: 0;
 	color: #fff;
@@ -269,16 +326,17 @@ button, input[type=button], input[type=reset], input[type=submit] {
 	text-transform: uppercase;
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 }
-input[type=checkbox], input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
-input[type=search] {
+input[type="search"] {
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
 	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing:    content-box;
 	box-sizing:         content-box;
 }
-input[type=search]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
 button::-moz-focus-inner,
@@ -286,7 +344,11 @@ input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly i
 	border: 0;
 	padding: 0;
 }
-input[type=text], input[type=email], input[type=url], input[type=password], input[type=search] {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
 	border: 1px solid #757575;
 	border-radius: 0;
 	line-height: 1;
@@ -554,7 +616,7 @@ a:active {
 .entry-meta {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 800px;
+	max-width: 700px;
 }
 #full-width entry-content {
 		max-width:1000px;
@@ -563,7 +625,10 @@ a:active {
 	color: #333333;
 }
 .sticky {
-	}
+	border-bottom: 4px double #ccc;
+	border-top: 4px double #ccc;
+	padding: 3.034rem 0;
+}
 .hentry {
 	margin-top: 7.6875rem;
 }
@@ -596,21 +661,14 @@ a:active {
 	-ms-word-wrap: break-word;
 	    word-wrap: break-word;
 }
-.content-area {
-	float:left;
-	width:75%;
-	}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1rem 0;
 }
 .entry-meta {
-	margin-top: 3.1rem;
-margin-left: 30px;
-padding-top: 1.12rem;
-font-family: Courier, monospace;
-font-size: 13px;
+	border-top: 1px solid #ccc;
+	margin-top: 1.811rem;
+	padding-top: 1.12rem;
 }
 .comments-link {
 	float: right;
@@ -781,7 +839,6 @@ img.alignright {
 .size-full,
 .size-large {
 	max-width: 760px;
-	margin-left: 40px;
 }
 
 /* If the image is smaller than 760px and inside a caption keep it at 520px */
@@ -936,21 +993,12 @@ object {
 }
 [class*="navigation"] .nav-previous {
 	float: left;
-	width: auto;
-	padding: 10px;
-	background:#333;
-	border:2px solid #333;
-	text-transform:uppercase;	
+	width: 50%;
 }
 [class*="navigation"] .nav-next {
 	float: right;
 	text-align: right;
-	width: auto;
-	padding: 10px;
-	background:#333;
-	color: #fff!important;
-	border:2px solid #333;
-	text-transform:uppercase;
+	width: 50%;
 }
 .nav-previous .arrow {
 	float: left;
@@ -963,7 +1011,6 @@ object {
 .nav-previous .link,
 .nav-next .link {
 	overflow: hidden;
-	color: #fff!important;
 }
 
 /*--------------------------------------------------------------
@@ -971,6 +1018,7 @@ object {
 --------------------------------------------------------------*/
 
 .comments-area {
+	border-top: 4px double #ccc;
 	margin: 1.875em auto 0 auto;
 	max-width: 760px;
 	padding-top: 1.875em;
@@ -1041,7 +1089,10 @@ object {
 .bypostauthor {}
 
 /* Comment Form */
-.comment-form [for=author], .comment-form [for=email], .comment-form [for=url], .comment-form [for=comment] {
+.comment-form [for="author"],
+.comment-form [for="email"],
+.comment-form [for="url"],
+.comment-form [for="comment"] {
 	float: left;
 	line-height: 1;
 	padding: 0.428em 0;
@@ -1103,14 +1154,13 @@ object {
 --------------------------------------------------------------*/
 
 .footer-widget-area {
+	border-top: 4px double #ccc;
 	margin: 3.75rem auto 0 auto;
 	max-width: 95%;
 	padding-top: 1.875rem;
 }
 .footer-widgets {
 	float: left;
-	width:31%;
-	border-top: 4px double #333;
 }
 .first,
 .second {
@@ -1191,10 +1241,6 @@ object {
 		padding: 0 20px;
 		width: 33%;
 	}
-	.content-area {
-	max-width: 100%;
-	width:95%;
-}
 }
 
 /* 780px */
@@ -1296,10 +1342,6 @@ object {
 	.comments-link {
 		float: none;
 	}
-	.content-area {
-	max-width: 100%;
-	width:95%;
-}
 }
 
 /* 600px */
@@ -1330,10 +1372,6 @@ object {
 		padding: 0;
 		width: 100%;
 	}
-	.content-area {
-	max-width: 100%;
-	width:95%;
-}
 }
 
 /* 500px */
@@ -1364,10 +1402,6 @@ object {
 		hyphens:         auto;
 		word-wrap: break-word;
 	}
-	.content-area {
-	max-width: 100%;
-	width:95%;
-}
 }
 #tertiary {
 	max-width: 360px;
@@ -1381,7 +1415,9 @@ object {
 #secondary {
 		max-width:95%
 }
-
+.content-area {
+	float:left;
+	}
 /* Contact form */
 .wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
     height:38px;
@@ -1628,23 +1664,6 @@ p a:hover {
 		padding: 0 35px 65px;
 
 	}
-	.navbar-nav .sub-menu {
-	
-		display:none!important;
-		}
-}
-#breadcrumbs {
-	margin: 10px;
-}
-#breadcrumbs a, .breadcrumb_last, .entry-cats a, a.read-more, a.more-tag {
-	text-transform: uppercase;
-	color: #555;
-	background-color: #fff;
-	padding: 5px;
-	border: 2px solid #555;
-	text-decoration:none;
-}
-#breadcrumbs a:hover, .entry-cats a:hover {
-	background-color: #000;
-	color: #fff;
+.site-header {
+	background-color: #000000;
 }

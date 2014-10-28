@@ -1,0 +1,1 @@
+Thank you for using Writ. For any support, contact us at http://gauravtiwari.org/contact/.
