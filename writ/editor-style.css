@@ -31,7 +31,7 @@ html .mceContentBody {
 
 body {
 	color: #222;
-	font-family: Lora, Georgia, sans-serif;
+	font-family: Open Sans, sans-serif;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	vertical-align: baseline;
@@ -98,7 +98,12 @@ hr {
  * ----------------------------------------------------------------------------
  */
 
-p {
+p, ol, ul, li, dt, dl, dd {
+	font-family: 'Crimson Text', Georgia, serif;
+	font-size: 16px;
+	font-size: 1.6em;
+}
+ p {
 	margin: 0 0 23px;
 }
 
@@ -142,7 +147,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: monospace, serif;
+	font-family: Monaco, monospace, serif;
 	font-size: 14px;
 	-webkit-hyphens: none;
 	-moz-hyphens:    none;
@@ -170,6 +175,9 @@ q {
 	-ms-hyphens:     none;
 	hyphens:         none;
 	quotes: none;
+	font-family: 'Crimson Text', Georgia, serif;
+	font-size: 20px;
+	font-size: 2.0em;
 }
 
 blockquote:before,

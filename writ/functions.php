@@ -130,7 +130,7 @@ function writ_font_url() {
 	 * by Crimson Text, translate these to 'off'. Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Crimson Text font: on or off', 'writ' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Crimson+Text:400,700,400italic,700italic' ), "//fonts.googleapis.com/css" );
+		$font_url = add_query_arg( 'family', urlencode( 'Crimson Text:400,700,400italic,700italic' ), "//fonts.googleapis.com/css" );
 	}
 
 	return $font_url;
