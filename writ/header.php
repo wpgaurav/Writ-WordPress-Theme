@@ -19,17 +19,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header id="headerum">
-
-<nav id="site-navigation" class="navbar" role="navigation">
-
-				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => '', 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'writ_default_menu', 'depth' => 2 ) ); ?>
-
-				</div></nav>
-
+	<header id="headerum">
+		<nav id="site-navigation" class="navbar" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => '', 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'writ_default_menu', 'depth' => 3 ) ); ?>
+		</nav>
 </header>
-<div id="page" class="hfeed site">
-	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -43,5 +37,3 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

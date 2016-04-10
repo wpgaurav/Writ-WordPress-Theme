@@ -11,6 +11,13 @@
 if ( ! isset( $content_width ) ) {
 	$content_width = 750; /* pixels */
 }
+function writ_content_width() {
+	if ( is_page_template( 'template-full-width.php' ) || is_attachment() ) {
+		global $content_width;
+		$content_width = 1080;
+	}
+}
+add_action( 'template_redirect', 'writ_content_width' );
 
 if ( ! function_exists( 'writ_setup' ) ) :
 /**
@@ -20,6 +27,7 @@ if ( ! function_exists( 'writ_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
 function writ_setup() {
 	/*
 	 * Make theme available for translation.
@@ -38,7 +46,8 @@ function writ_setup() {
 	 * Set post thumbnail size.
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 750, 'auto' );
+	set_post_thumbnail_size( 300, 'auto' );
+	add_image_size( 'slider-thumbnail', 1080, 550, true );
 
 	 // Enable support for Post Formats
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'link', 'quote', 'video' ) );
@@ -55,6 +64,7 @@ function writ_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array( 'primary' => __( 'Primary Menu', 'writ' ),
 					'secondary' => __( 'Secondary Menu', 'writ' ),
+					'footer' => __('Footer Menu', 'writ')
  ) );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
@@ -108,7 +118,7 @@ add_action( 'widgets_init', 'writ_widgets_init' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of Lora by default is localized. For languages that use characters
+ * The use of Crimson Text by default is localized. For languages that use characters
  * not supported by the font, the font can be disabled.
  *
  * Returns the font stylesheet URL or empty string if disabled.
@@ -117,10 +127,10 @@ function writ_font_url() {
 	$font_url = '';
 	/*
 	 * Translators: If there are characters in your language that are not supported
-	 * by Lora, translate this to 'off'. Do not translate into your own language.
+	 * by Crimson Text, translate these to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Lora font: on or off', 'writ' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Lora:400,700,400italic,700italic' ), "//fonts.googleapis.com/css" );
+	if ( 'off' !== _x( 'on', 'Crimson Text font: on or off', 'writ' ) ) {
+		$font_url = add_query_arg( 'family', urlencode( 'Crimson+Text:400,700,400italic,700italic' ), "//fonts.googleapis.com/css" );
 	}
 
 	return $font_url;
@@ -130,12 +140,12 @@ function writ_font_url() {
  * Enqueue scripts and styles
  */
 function writ_scripts() {
-	wp_enqueue_style( 'writ-lora', writ_font_url(), array(), null );
-	wp_enqueue_style( 'writ-style', get_stylesheet_uri(), array(), '20130728' );
+	wp_enqueue_style( 'writ-crimson', writ_font_url(), array(), null );
+	wp_enqueue_style( 'writ-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'writ-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130728', true );
 	wp_enqueue_script( 'writ-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20130728', true );
-
+	wp_enqueue_script( 'writ-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.1' );
 	wp_enqueue_script( 'writ-keyboard-accessible-navigation', get_template_directory_uri() . '/js/keyboard-accessible-navigation.js', array( 'jquery' ), '20130729', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -149,7 +159,7 @@ add_action( 'wp_enqueue_scripts', 'writ_scripts' );
  *
  */
 function writ_admin_font() {
-	wp_enqueue_style( 'writ-lora', writ_font_url(), array(), null );
+	wp_enqueue_style( 'writ-crimson', writ_font_url(), array(), null );
 }
 add_action( 'admin_print_scripts-appearance_page_custom-header', 'writ_admin_font' );
 
@@ -297,6 +307,15 @@ function writ_category_transient_flusher() {
 }
 add_action( 'edit_category', 'writ_category_transient_flusher' );
 add_action( 'save_post',     'writ_category_transient_flusher' );
+
+/**
+*	Returns a "Read More" link for excerpts.
+* @since writ 1.2
+*/
+function writ_excerpt_more( $more ) {
+	return '<a class="more-link" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read more', 'writ' ) . '</a>';
+}
+add_filter( 'excerpt_more', 'writ_excerpt_more' );
 
 /**
  * Implement the Custom Header feature.

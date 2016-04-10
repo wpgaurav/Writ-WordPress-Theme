@@ -4,7 +4,7 @@ Theme URI: http://gauravtiwari.org/2014/08/23/writ-free-responsive-wordpress-the
 Author: Gaurav Tiwari
 Author URI: http://gauravtiwari.org/
 Description: Writ is a WordPress theme specially made for story writers, poets and  content based bloggers. Writ is aimed to be completely content focused with four optional sidebars, three in footer and one on right of the content area. It features WordPress post formats, featured images and custom header.
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive-layout, custom-background, custom-header, custom-menu, featured-images, rtl-language-support, editor-style, post-formats, photoblogging, white, light
@@ -12,6 +12,11 @@ Tags: responsive-layout, custom-background, custom-header, custom-menu, featured
 Writ is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 */
 
+/* -------------------------------------------------------------
+* Importing Open Sans just for the front end not for the Dashboard & Visual Editor where it is already present.
+* Strange?
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600);
 
 /*--------------------------------------------------------------
 1.0 - Reset
@@ -102,9 +107,10 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: Lora, Georgia, serif;
+	font-family: 'Open Sans', Helvetica, sans-serif;
 	line-height: 1.45;
 	font-size: 18px;
+	max-width:100%;
 }
 
 /* Headings */
@@ -768,12 +774,11 @@ article .format-audio {
 /* Make right and left aligned images stick out from the content */
 .wp-caption.alignleft,
 img.alignleft {
-	margin-left: -115px;
+	width:100%;
 	max-width: 760px;
 }
 .wp-caption.alignright,
 img.alignright {
-	margin-right: -115px;
 	max-width: 760px;
 }
 
@@ -796,12 +801,10 @@ img.alignright {
 .size-full.aligncenter,
 .size-large.alignnone,
 .size-large.aligncenter {
-	margin-left: -115px;
 }
 
 /* Full size and large images with a caption */
 .wp-caption.width-750 {
-	margin-left: -115px;
 	max-width: 760px;
 }
 .wp-caption.width-750 img {
@@ -940,7 +943,7 @@ object {
 	padding: 10px;
 	background:#333;
 	border:2px solid #333;
-	text-transform:uppercase;	
+	text-transform:uppercase;
 }
 [class*="navigation"] .nav-next {
 	float: right;
@@ -1110,7 +1113,7 @@ object {
 .footer-widgets {
 	float: left;
 	width:31%;
-	border-top: 4px double #333;
+	padding: 4em 1em 2em !important;
 }
 .first,
 .second {
@@ -1330,6 +1333,9 @@ object {
 		padding: 0;
 		width: 100%;
 	}
+	#tertiary {
+	display:none;
+	}
 	.content-area {
 	max-width: 100%;
 	width:95%;
@@ -1363,6 +1369,9 @@ object {
 		-ms-hyphens:     auto;
 		hyphens:         auto;
 		word-wrap: break-word;
+	}
+	#tertiary {
+	display:none;
 	}
 	.content-area {
 	max-width: 100%;
@@ -1505,33 +1514,7 @@ header#headerum {
 
 .read-more {
 
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#e4685d),color-stop(1,#000000));
-
-	background: -moz-linear-gradient(top,#e4685d 5%,#000000 100%);
-
-	background: -webkit-linear-gradient(top,#e4685d 5%,#000000 100%);
-
-	background: -o-linear-gradient(top,#e4685d 5%,#000000 100%);
-
-	background: -ms-linear-gradient(top,#e4685d 5%,#000000 100%);
-
-	background: linear-gradient(to bottom,#e4685d 5%,#000000 100%);
-
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4685d',endColorstr='#000000',GradientType=0);
-
-	background-color: #e4685d;
-
-	-moz-border-radius: 42px;
-
-	-webkit-border-radius: 42px;
-
-	border-radius: 42px;
-
-	border: 1px solid #ffffff;
-
 	display: inline-block;
-
-	cursor: pointer;
 
 	color: #ffffff;
 
@@ -1541,43 +1524,7 @@ header#headerum {
 
 	text-decoration: none;
 
-	text-shadow: 0 0 0 #b23e35;
-
-}
-
-
-
-.more-link:hover,
-
-.read-more:hover {
-
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#000000),color-stop(1,#e4685d));
-
-	background: -moz-linear-gradient(top,#000000 5%,#e4685d 100%);
-
-	background: -webkit-linear-gradient(top,#000000 5%,#e4685d 100%);
-
-	background: -o-linear-gradient(top,#000000 5%,#e4685d 100%);
-
-	background: -ms-linear-gradient(top,#000000 5%,#e4685d 100%);
-
-	background: linear-gradient(to bottom,#000000 5%,#e4685d 100%);
-
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#e4685d',GradientType=0);
-
-	background-color: #e0e0e0;
-
-}
-
-
-
-.more-link:active,
-
-.read-more:active {
-
-	position: relative;
-
-	top: 1px;
+	background: #000;
 
 }
 
@@ -1629,7 +1576,7 @@ p a:hover {
 
 	}
 	.navbar-nav .sub-menu {
-	
+
 		display:none!important;
 		}
 }
