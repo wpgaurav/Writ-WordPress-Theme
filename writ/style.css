@@ -155,7 +155,7 @@ hr {
 /* Text elements */
 p {
 	margin-bottom: 1.618rem;
-	font-family: 'Crimson Text', Georgia, serif;
+	font-family: 'PT Serif', Georgia, serif;
 	font-size: 18px;
 }
 p:last-child {
@@ -163,7 +163,7 @@ p:last-child {
 }
 ul, ol {
 	margin: 0 0 1.618rem 1.2rem;
-	font-family: 'Crimson Text', Georgia, serif;
+	font-family: 'PT Serif', Georgia, serif;
 }
 ul {
 	list-style: disc;
@@ -605,6 +605,9 @@ a:active {
 	-ms-word-wrap: break-word;
 	    word-wrap: break-word;
 }
+div#primary {
+    padding: 0 1em 2.5em 2em;
+}
 .content-area {
 	float:left;
 	width:75%;
@@ -620,25 +623,13 @@ a:active {
     font-size: 13px;
 }
 a.post-edit-link {
-    margin-left: 20px;
-    padding: 8px 25px;
-    border: 2px solid;
-    border-radius: 5px;
-    background: inherit;
 }
 span.posted-on {
-    margin-right: 5px;
     padding: 5px;
-    border-bottom: 2px dotted;
-    border-top: 2px dotted;
 }
-span.comments-link a {
-    padding: 8px 12px;
-    background: #B71C1C;
-    color: #fff;
-}
-.comments-link {
-	float: right;
+span.byline, span.edit-link, span.comment-link {
+    border-right: 1px solid #999;
+    padding-right: 5px;
 }
 .categories-tags {
 	clear: both;
@@ -736,7 +727,7 @@ article .format-aside .hentry {
 }
 .format-image .entry-content,
 .format-image .entry-meta {
-	max-width: 760px;
+	max-width: 750px;
 }
 .format-image .wp-caption.alignleft,
 .format-image .wp-caption.width-750,
@@ -756,7 +747,7 @@ article .format-aside .hentry {
 /* Video */
 .format-video .entry-content,
 .format-video .entry-meta {
-	max-width: 760px;
+	max-width: 750px;
 }
 /*Audio */
 article .format-audio {
@@ -793,22 +784,23 @@ article .format-audio {
 /* Make right and left aligned images stick out from the content */
 .wp-caption.alignleft,
 img.alignleft {
-	width:100%;
-	max-width: 760px;
+	max-width: 750px;
+	float:left;
 }
 .wp-caption.alignright,
 img.alignright {
-	max-width: 760px;
+	max-width: 750px;
+	float:right
 }
 
 /* Stand alone full size and large images in the standard format */
 .size-full,
 .size-large {
-	max-width: 760px;
+	max-width: 750px;
 	margin-left: 40px;
 }
 
-/* If the image is smaller than 760px and inside a caption keep it at 520px */
+/* If the image is smaller than 750px and inside a caption keep it at 520px */
 .wp-caption.smaller-than-750 {
 	margin-left: auto;
 }
@@ -824,7 +816,7 @@ img.alignright {
 
 /* Full size and large images with a caption */
 .wp-caption.width-750 {
-	max-width: 760px;
+	max-width: 750px;
 }
 .wp-caption.width-750 img {
 	margin-left: auto;
@@ -937,7 +929,7 @@ img.alignright {
 .attachment img {
 	display: block;
 	margin: 0 auto;
-	max-width: 760px;
+	max-width: 750px;
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -994,7 +986,7 @@ object {
 
 .comments-area {
 	margin: 1.875em auto 0 auto;
-	max-width: 760px;
+	max-width: 750px;
 	padding-top: 1.875em;
 }
 .comment-navigation {
@@ -1104,7 +1096,7 @@ object {
 
 .search-results .content-area {
 	margin: 0 auto 4.1875rem auto;
-	max-width: 760px;
+	max-width: 750px;
 }
 
 /*--------------------------------------------------------------
@@ -1124,11 +1116,7 @@ object {
 15.0 Widgets
 --------------------------------------------------------------*/
 
-.footer-widget-area {
-	margin: 3.75rem auto 0 auto;
-	max-width: 95%;
-	padding-top: 1.875rem;
-}
+
 .footer-widgets {
 	float: left;
 	width:31%;
@@ -1221,12 +1209,6 @@ object {
 
 /* 780px */
 @media (max-width: 48.75em) {
-	.site-header,
-	.site-content,
-	.site-footer {
-		margin-left: 2rem;
-		margin-right: 2rem;
-	}
 	.main-navigation ul {
 		display: none;
 	}
@@ -1326,12 +1308,6 @@ object {
 
 /* 600px */
 @media (max-width: 37.5em) {
-	.site-header,
-	.site-content,
-	.site-footer {
-		margin-left: 1rem;
-		margin-right: 1rem;
-	}
 
 	.hentry {
 		margin-top: 4.1875rem;
@@ -1399,7 +1375,7 @@ object {
 }
 #tertiary {
 	max-width: 360px;
-	margin-left:15px
+	margin-left:15px;
 	margin-right: 10px;
 	padding-top: 30px;
 }
@@ -1407,7 +1383,12 @@ object {
 		color:#22313f;
 }
 #secondary {
-		max-width:95%
+    max-width: 100%;
+    padding: 1em;
+    /* background: beige; */
+}
+.footer-elements {
+
 }
 
 /* Contact form */
@@ -1566,6 +1547,7 @@ p a:hover {
 	#masthead {
 
 		padding: 35px 35px 0;
+		background: #F5F5DC;
 
 	}
 

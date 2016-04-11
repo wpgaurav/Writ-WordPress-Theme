@@ -14,7 +14,7 @@ if ( ! isset( $content_width ) ) {
 function writ_content_width() {
 	if ( is_page_template( 'template-full-width.php' ) || is_attachment() ) {
 		global $content_width;
-		$content_width = 1080;
+		$content_width = 1000;
 	}
 }
 add_action( 'template_redirect', 'writ_content_width' );
@@ -47,7 +47,7 @@ function writ_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 300, 'auto' );
-	add_image_size( 'slider-thumbnail', 1080, 550, true );
+	add_image_size( 'slider-thumbnail', 1000, 550, true ); // future use
 
 	 // Enable support for Post Formats
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'link', 'quote', 'video' ) );
@@ -130,7 +130,7 @@ function writ_font_url() {
 	 * by Crimson Text, translate these to 'off'. Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Crimson Text font: on or off', 'writ' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Crimson Text:400,700,400italic,700italic' ), "//fonts.googleapis.com/css" );
+		$font_url = add_query_arg( 'family', urlencode( 'PT Serif:400,700,400italic,700italic' ), "//fonts.googleapis.com/css" );
 	}
 
 	return $font_url;
@@ -140,12 +140,12 @@ function writ_font_url() {
  * Enqueue scripts and styles
  */
 function writ_scripts() {
-	wp_enqueue_style( 'writ-crimson', writ_font_url(), array(), null );
+	wp_enqueue_style( 'writ-serif', writ_font_url(), array(), null );
 	wp_enqueue_style( 'writ-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'writ-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130728', true );
 	wp_enqueue_script( 'writ-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20130728', true );
-	wp_enqueue_script( 'writ-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.1' );
+	// wp_enqueue_script( 'writ-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.1' );
 	wp_enqueue_script( 'writ-keyboard-accessible-navigation', get_template_directory_uri() . '/js/keyboard-accessible-navigation.js', array( 'jquery' ), '20130729', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -159,7 +159,7 @@ add_action( 'wp_enqueue_scripts', 'writ_scripts' );
  *
  */
 function writ_admin_font() {
-	wp_enqueue_style( 'writ-crimson', writ_font_url(), array(), null );
+	wp_enqueue_style( 'writ-serif', writ_font_url(), array(), null );
 }
 add_action( 'admin_print_scripts-appearance_page_custom-header', 'writ_admin_font' );
 

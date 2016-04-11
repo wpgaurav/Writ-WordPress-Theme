@@ -38,7 +38,9 @@
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<?php writ_post_meta(); ?>
+			
 			<?php edit_post_link( __( 'Edit', 'writ' ), '<span class="edit-link">', '</span>' ); ?>
+		
 		<?php endif; ?>
 
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
